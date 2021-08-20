@@ -1,6 +1,6 @@
 <?php
 
-namespace Address;
+namespace Ssgroup\Address;
 
 use Illuminate\Support\ServiceProvider;
 

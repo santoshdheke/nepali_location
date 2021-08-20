@@ -1,6 +1,6 @@
 <?php
 
-namespace Address\Model;
+namespace Ssgroup\Address\Model;
 
 use Address\Model\Institute;
 use Address\Model\Municipality;

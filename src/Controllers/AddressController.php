@@ -1,6 +1,6 @@
 <?php
 
-    namespace Address\Controllers;
+    namespace Ssgroup\Address\Controllers;
 
 use Address\Model\Municipality;
 use Address\Model\Province;
