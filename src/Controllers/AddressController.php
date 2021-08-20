@@ -2,9 +2,9 @@
 
     namespace Ssgroup\Address\Controllers;
 
-use Address\Model\Municipality;
-use Address\Model\Province;
-use Address\Model\State;
+use Ssgroup\Address\Model\Municipality;
+use Ssgroup\Address\Model\Province;
+use Ssgroup\Address\Model\State;
 use App\Http\Controllers\Controller;
 
 class AddressController extends Controller
