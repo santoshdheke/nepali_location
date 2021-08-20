@@ -1,5 +1,5 @@
 {
-  "name": "santosh/address",
+  "name": "ssgroup/address",
   "type": "library",
   "require": {
     "sagautam5/local-states-nepal": "1.0"
