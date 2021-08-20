@@ -2,9 +2,9 @@
 
 namespace Ssgroup\Address\Model;
 
-use Address\Model\Institute;
-use Address\Model\Municipality;
-use Address\Model\Province;
+use Ssgroup\Address\Model\Institute;
+use Ssgroup\Address\Model\Municipality;
+use Ssgroup\Address\Model\Province;
 use Illuminate\Database\Eloquent\Model;
 
 class State extends Model

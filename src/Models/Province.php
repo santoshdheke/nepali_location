@@ -2,8 +2,8 @@
 
 namespace Ssgroup\Address\Model;
 
-use Address\Model\Institute;
-use Address\Model\State;
+use Ssgroup\Address\Model\Institute;
+use Ssgroup\Address\Model\State;
 use Illuminate\Database\Eloquent\Model;
 
 class Province extends Model
