@@ -22,5 +22,5 @@
       ]
     }
   },
-  "minimum-stability": "^1.0"
+  "minimum-stability": "dev"
 }
