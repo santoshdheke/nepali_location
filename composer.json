@@ -1,24 +1,18 @@
 {
-  "name": "ssgroup/address",
-  "type": "library",
-  "require": {},
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "santosh dheke",
-      "email": "santoshdheke46@gmail.com"
-    }
-  ],
-  "psr-4": {
-    "App\\": "app/",
-    "Address\\": "src"
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Address\\AddressServiceProvider"
-      ]
-    }
-  },
-  "minimum-stability": "beta"
+    "name": "ssgroup/address",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ssgroup\\Address\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "santosh dheke",
+            "email": "santoshdheke46@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
 }
