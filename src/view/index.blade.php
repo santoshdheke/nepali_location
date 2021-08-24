@@ -49,9 +49,11 @@
             datas.data.forEach(function (data, key) {
                 html = html + `<option `;
 
+                @if (isset($row))
                 if (data.title == "{{ $row->province }}") {
                     html = html + "selected ";
                 }
+                @endif
 
                 html = html + `value="${data.id}">${data.title}</option>`;
             })
