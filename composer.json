@@ -14,5 +14,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "sagautam5/local-states-nepal": "^1.0"
+    }
 }
