@@ -10,8 +10,13 @@
 
 <div class="form-group" id="district_div">
     <label for="">District</label>
-    <select name="district" class="form-control">
+    <select name="district" id="district" class="form-control">
         <option value="">Choose District</option>
+        @if(isset($districts) && count($districts)>0)
+            @foreach($districts as $district)
+                <option {{ (isset($row) && $row->district == $district->title)?'selected':'' }} value="{{ $district->id }}">{{ $district->title }}</option>
+            @endforeach
+        @endif
     </select>
     @if($errors->has('district'))
         <code>{{ $errors->first('district') }}</code>
@@ -22,6 +27,11 @@
     <label for="">Municipality</label>
     <select name="municipality" class="form-control">
         <option value="">Choose Municipality</option>
+        @if(isset($municipalities) && count($municipalities)>0)
+            @foreach($municipalities as $municipality)
+                <option {{ (isset($row) && $row->municipality == $municipality->title)?'selected':'' }} value="{{ $municipality->id }}">{{ $municipality->title }}</option>
+            @endforeach
+        @endif
     </select>
     @if($errors->has('municipality'))
         <code>{{ $errors->first('municipality') }}</code>
@@ -37,7 +47,13 @@
                     <option value="">Choose Province</option>`;
 
             datas.data.forEach(function (data, key) {
-                html = html + `<option value="${data.id}">${data.title}</option>`;
+                html = html + `<option `;
+
+                if (data.title == "{{ $row->province }}") {
+                    html = html + "selected ";
+                }
+
+                html = html + `value="${data.id}">${data.title}</option>`;
             })
 
             html = html + `</select>
