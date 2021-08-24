@@ -15,6 +15,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "sagautam5/local-states-nepal": "^1.0"
+        "sagautam5/local-states-nepal": "^1.0",
+        "ssgroup/apimanager": "dev-master"
     }
 }
