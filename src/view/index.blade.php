@@ -1,41 +1,43 @@
-<div class="form-group" id="province_div">
-    <label for="">Province</label>
-    <select name="province" class="form-control">
-        <option value="">Choose Province</option>
-    </select>
-    @if($errors->has('province'))
-        <code>{{ $errors->first('province') }}</code>
-    @endif
-</div>
-
-<div class="form-group" id="district_div">
-    <label for="">District</label>
-    <select name="district" id="district" class="form-control">
-        <option value="">Choose District</option>
-        @if(isset($districts) && count($districts)>0)
-            @foreach($districts as $district)
-                <option {{ (isset($row) && $row->district == $district->title)?'selected':'' }} value="{{ $district->id }}">{{ $district->title }}</option>
-            @endforeach
+<div class="row">
+    <div class="form-group col-md-4" id="province_div">
+        <label for="">Province</label>
+        <select name="province" class="form-control">
+            <option value="">Choose Province</option>
+        </select>
+        @if($errors->has('province'))
+            <code>{{ $errors->first('province') }}</code>
         @endif
-    </select>
-    @if($errors->has('district'))
-        <code>{{ $errors->first('district') }}</code>
-    @endif
-</div>
+    </div>
 
-<div class="form-group" id="municipality_div">
-    <label for="">Municipality</label>
-    <select name="municipality" class="form-control">
-        <option value="">Choose Municipality</option>
-        @if(isset($municipalities) && count($municipalities)>0)
-            @foreach($municipalities as $municipality)
-                <option {{ (isset($row) && $row->municipality == $municipality->title)?'selected':'' }} value="{{ $municipality->id }}">{{ $municipality->title }}</option>
-            @endforeach
+    <div class="form-group col-md-4" id="district_div">
+        <label for="">District</label>
+        <select name="district" id="district" class="form-control">
+            <option value="">Choose District</option>
+            @if(isset($districts) && count($districts)>0)
+                @foreach($districts as $district)
+                    <option {{ (isset($row) && $row->district == $district->title)?'selected':'' }} value="{{ $district->id }}">{{ $district->title }}</option>
+                @endforeach
+            @endif
+        </select>
+        @if($errors->has('district'))
+            <code>{{ $errors->first('district') }}</code>
         @endif
-    </select>
-    @if($errors->has('municipality'))
-        <code>{{ $errors->first('municipality') }}</code>
-    @endif
+    </div>
+
+    <div class="form-group col-md-4" id="municipality_div">
+        <label for="">Municipality</label>
+        <select name="municipality" class="form-control">
+            <option value="">Choose Municipality</option>
+            @if(isset($municipalities) && count($municipalities)>0)
+                @foreach($municipalities as $municipality)
+                    <option {{ (isset($row) && $row->municipality == $municipality->title)?'selected':'' }} value="{{ $municipality->id }}">{{ $municipality->title }}</option>
+                @endforeach
+            @endif
+        </select>
+        @if($errors->has('municipality'))
+            <code>{{ $errors->first('municipality') }}</code>
+        @endif
+    </div>
 </div>
 
 @push('js')
